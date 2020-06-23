@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "731ad5b8-5453-4531-bb23-e69ec975b0da",
+		"name": "Vending Machine Prox GCP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Transaction - All",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vending-machine-prox.uc.r.appspot.com/transaction/all",
+					"protocol": "https",
+					"host": [
+						"vending-machine-prox.uc.r.appspot.com"
+					],
+					"path": [
+						"transaction",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product - All",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vending-machine-prox.uc.r.appspot.com/product/all",
+					"protocol": "https",
+					"host": [
+						"vending-machine-prox.uc.r.appspot.com"
+					],
+					"path": [
+						"product",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vending Machine - All",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vending-machine-prox.uc.r.appspot.com/vending/all",
+					"protocol": "https",
+					"host": [
+						"vending-machine-prox.uc.r.appspot.com"
+					],
+					"path": [
+						"vending",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vending Machine - Sell Product",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"vendingMachineId\": 2,\n\t\"quantity\": 1,\n\t\"paymentMethod\": 1,\n\t\"requestCashes\": [{\"quantity\": 2, \"amount\": 2.0}],\n\t\"productId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vending-machine-prox.uc.r.appspot.com/transaction/product-sell",
+					"protocol": "https",
+					"host": [
+						"vending-machine-prox.uc.r.appspot.com"
+					],
+					"path": [
+						"transaction",
+						"product-sell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction - Total Sales By Machine",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vending-machine-prox.uc.r.appspot.com/transaction/total-sales/1",
+					"protocol": "https",
+					"host": [
+						"vending-machine-prox.uc.r.appspot.com"
+					],
+					"path": [
+						"transaction",
+						"total-sales",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction - Total Sales",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vending-machine-prox.uc.r.appspot.com/transaction/total-sales",
+					"protocol": "https",
+					"host": [
+						"vending-machine-prox.uc.r.appspot.com"
+					],
+					"path": [
+						"transaction",
+						"total-sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction - From Today",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vending-machine-prox.uc.r.appspot.com/transaction/from/today",
+					"protocol": "https",
+					"host": [
+						"vending-machine-prox.uc.r.appspot.com"
+					],
+					"path": [
+						"transaction",
+						"from",
+						"today"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction - From Any Date",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateFrom\": \"2020-06-19 00:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vending-machine-prox.uc.r.appspot.com/transaction/from",
+					"protocol": "https",
+					"host": [
+						"vending-machine-prox.uc.r.appspot.com"
+					],
+					"path": [
+						"transaction",
+						"from"
+					]
+				},
+				"description": "Post the date from you want create the report"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
